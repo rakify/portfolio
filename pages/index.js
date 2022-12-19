@@ -31,7 +31,11 @@ export default function Home() {
       <Container
         maxWidth="lg"
         className={styles.container}
-        sx={{ mt: { sm: 0, md: "100px" } }}
+        sx={{
+          mt: { sm: 0, md: "100px" },
+          flexDirection: { sm: "column", md: "row" },
+          gap: { sm: 0, md: "20px" },
+        }}
       >
         <Stack direction="column">
           <Link href="https://github.com/rakify">
