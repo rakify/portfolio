@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
       <Topbar />
       <Container
-        maxWidth="lg"
+        maxWidth="md"
         className={styles.container}
         sx={{ mt: { sm: 0, md: "100px" } }}
       >

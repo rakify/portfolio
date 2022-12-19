@@ -6,7 +6,6 @@
     background-color: whitesmoke;
 }
 .card {
-    max-width: 600px;
     min-width: 300px;
     display: flex;
     flex-direction: column;
