@@ -13,7 +13,7 @@ const Topbar = () => {
   return (
     <>
       <CssBaseline />
-      <AppBar sx={{ backgroundColor: "#E3F2FD", color: "black" }}>
+      <AppBar sx={{ backgroundColor: "#59C1BD", color: "black" }}>
         <Toolbar
           sx={{
             display: "flex",

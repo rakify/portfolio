@@ -1,9 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Container } from "@mui/system";
 import Topbar from "../components/Topbar";
 import {
-  Box,
   Button,
   Card,
   CardActions,
@@ -17,6 +15,7 @@ import {
 import Link from "next/link";
 import { GitHub, LinkedIn, Send } from "@mui/icons-material";
 import styles from "../styles/Home.module.css";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -37,22 +36,29 @@ export default function Home() {
           gap: { sm: 0, md: "20px" },
         }}
       >
-        <Stack direction="column">
-          <Link href="https://github.com/rakify">
-            <Tooltip title="Github" placement="top">
-              <GitHub fontSize="large" />
-            </Tooltip>
-          </Link>
-          <Link href="https://www.linkedin.com/in/rakib-miah/">
-            <Tooltip title="Linkedin" placement="bottom">
-              <LinkedIn fontSize="large" />
-            </Tooltip>
-          </Link>
+        <Stack direction="column" className={styles.icons}>
+          <Paper elevation={5} className={styles.icon}>
+            <Link href="https://github.com/rakify">
+              <Tooltip title="Github" placement="top">
+                <GitHub fontSize="large" />
+              </Tooltip>
+            </Link>
+          </Paper>
+          <Paper className={styles.icon}>
+            <Link
+              href="https://www.linkedin.com/in/rakib-miah/"
+              className={styles.icon}
+            >
+              <Tooltip title="Linkedin" placement="bottom">
+                <LinkedIn fontSize="large" />
+              </Tooltip>
+            </Link>
+          </Paper>
         </Stack>
         <Card className={styles.card}>
           <CardContent>
-            <Typography gutterBottom variant="h3">
-              👋 Hi, I’m Rakib Miah
+            <Typography gutterBottom variant="h4">
+              Rakib Miah 👋
             </Typography>
             <Divider textAlign="right" role="presentation">
               <Typography variant="h6">Fullstack Developer</Typography>
@@ -70,6 +76,7 @@ export default function Home() {
             </Button>
           </CardActions>
         </Card>
+        <Footer />
       </Container>
     </>
   );

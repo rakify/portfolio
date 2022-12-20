@@ -1,18 +1,33 @@
 .container {
     display:flex;
     align-items: center;
-    background-color: whitesmoke;
 }
+.icons{
+    flex:1;
+    display: flex;
+    gap:5px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon :hover{
+    background-color: aquamarine;
+    border-radius: 100%;
+}
+
 .card {
-    min-width: 300px;
+    flex:3;
+    width: 300px;
+    padding:100px;
 }
 .button {
     gap:1px;
     border-radius: 10px;
     padding:3px;
-}
-.button:hover{
-    gap:5px;
 }
 .buttonText{
  font-size:small;
