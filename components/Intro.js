@@ -6,7 +6,7 @@ const Intro = () => {
       <div className={styles.i}>
         <div className={styles.iLeft}>
           <div className={styles.iLeftWrapper}>
-            <h2 className={styles.iIntro}>Hello, My name is</h2>
+            <h2 className={styles.iIntro}>👋</h2>
             <h1 className={styles.iName}>Rakib Miah</h1>
             <div className={styles.iTitle}>
               <div className={styles.iTitleItem}>Fullstack Developer</div>

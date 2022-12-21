@@ -1,15 +1,25 @@
 import { Mail, Person } from "@mui/icons-material";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/context";
 import styles from "../styles/Topbar.module.css";
+import Toggle from "./Toggle";
 
 const Topbar = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <>
-      <div className={styles.topbar}>
+      <div
+        className={styles.topbar}
+        style={{
+          backgroundColor: darkMode && "#333",
+          color: darkMode && "white",
+        }}
+      >
         <div className={styles.wrapper}>
           <a href="/" className={styles.logo}>
-            devRakib
+            Rakib Miah
           </a>
           <div className={styles.itemContainer}>
             <Person className={styles.icon} />
@@ -21,6 +31,7 @@ const Topbar = () => {
           </div>
         </div>
       </div>
+      {/* <Toggle /> */}
     </>
   );
 };

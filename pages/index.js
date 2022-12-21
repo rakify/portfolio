@@ -8,8 +8,9 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/context";
 import Toggle from "../components/Toggle";
 import Topbar from "../components/Topbar";
+import styles from "../styles/Home.module.css";
 
-export default function Index() {
+export default function Home() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   return (
@@ -25,14 +26,21 @@ export default function Index() {
           backgroundColor: darkMode ? "#222" : "white",
           color: darkMode && "white",
         }}
+        className={styles.app}
       >
         <Topbar />
-        <Toggle />
-        <Intro />
-        <About />
-        <Projects />
-        <Contact />
-        <Footer />
+        <div className={styles.sections}>
+          <div className={styles.section}>
+            {/* <Toggle /> */}
+            <Intro />
+          </div>
+          <div className={styles.section}>
+            <Projects />
+          </div>
+          <div className={styles.section}>
+            <Contact />
+          </div>
+        </div>
       </div>
     </>
   );

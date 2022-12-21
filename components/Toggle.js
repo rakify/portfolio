@@ -12,7 +12,7 @@ const Toggle = () => {
   return (
     <div className={styles.t}>
       <Nightlight className={styles.icon} />
-      <LightMode className={styles.icon} />
+      <LightMode style={{ color: "black" }} className={styles.icon} />
       <div
         className={styles.tButton}
         onClick={handleClick}

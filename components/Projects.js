@@ -4,7 +4,7 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <div className={styles.p}>
+    <div className={styles.p} id="projects">
       <div className={styles.pTexts}>
         <h1 className={styles.pTitle}>My Works</h1>
         <p className={styles.pDesc}>I have built some projects.</p>

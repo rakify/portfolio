@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles.c}>
+    <div className={styles.c} id="contact">
       <div className={styles.cBg}></div>
       <div className={styles.cWrapper}>
         <div className={styles.cLeft}>
@@ -58,6 +58,7 @@ const Contact = () => {
           </p>
           <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
             <input
+              required
               style={{ backgroundColor: darkMode && "#333" }}
               className={styles.input}
               type="text"
@@ -72,6 +73,7 @@ const Contact = () => {
               name="user_subject"
             />
             <input
+              required
               style={{ backgroundColor: darkMode && "#333" }}
               className={styles.input}
               type="text"
@@ -79,13 +81,16 @@ const Contact = () => {
               name="user_email"
             />
             <textarea
+              required
               style={{ backgroundColor: darkMode && "#333" }}
               rows="5"
               placeholder="Message"
               name="message"
               className={styles.textarea}
             />
-            <button className={styles.button}>{done?"Sent":"Submit"}</button>
+            <button className={styles.button} disabled={done}>
+              {done ? "Sent" : "Submit"}
+            </button>
             {done && "Thank you..."}
           </form>
         </div>
