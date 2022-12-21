@@ -13,8 +13,8 @@ const Intro = () => {
             </div>
             <p className={styles.iDesc}>
               I build web apps using MERN stack, Nextjs and mobile apps using
-              React Native. I'm available to collaborate on any web development
-              project or react native project
+              React Native. I'm currently available to collaborate on any web
+              development project or react native project.
             </p>
           </div>
         </div>

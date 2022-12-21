@@ -1,11 +1,16 @@
 import Head from "next/head";
-
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import Contact from "../components/Contact";
+import { useContext } from "react";
+import { ThemeContext } from "../context/context";
+import Toggle from "../components/Toggle";
 
-export default function Home() {
+export default function Index() {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <>
       <Head>
@@ -14,10 +19,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Intro />
-      <About />
-      <Projects />
-      <Footer />
+      <div
+        style={{
+          backgroundColor: darkMode ? "#222" : "white",
+          color: darkMode && "white",
+        }}
+      >
+        <Toggle />
+        <Intro />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 }
