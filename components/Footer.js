@@ -2,11 +2,7 @@ import React from "react";
 import SpeedDialButton from "./SpeedDialButton";
 
 const Footer = () => {
-  return (
-    <>
-      <SpeedDialButton />
-    </>
-  );
+  return <></>;
 };
 
 export default Footer;
