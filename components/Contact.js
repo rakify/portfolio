@@ -1,23 +1,23 @@
 import styles from "../styles/Contact.module.css";
 import { useContext, useRef, useState } from "react";
 import emailjs from "emailjs-com";
-// import { ThemeContext } from "../../context";
+import { ThemeContext } from "../context/context";
 import { Email, Home, Phone } from "@mui/icons-material";
 
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
-  //   const theme = useContext(ThemeContext);
-  //   const darkMode = theme.state.darkMode;
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_rrvnzco",
-        "template_3v5nih4",
+        "service_1pkfoam",
+        "template_smsjbuq",
         formRef.current,
-        "user_DrriDPTGKO2Zj4RDXCA6W"
+        "g_uBuIzT4w4pszcW_"
       )
       .then(
         (result) => {
@@ -38,15 +38,15 @@ const Contact = () => {
           <h1 className={styles.cTitle}>Let's discuss your project</h1>
           <div className={styles.cInfo}>
             <div className={styles.cInfoItem}>
-              <Phone />
+              <Phone className={styles.cIcon} />
               +880 1874557769
             </div>
             <div className={styles.cInfoItem}>
-              <Email />
+              <Email className={styles.cIcon} />
               irakibm@gmail.com
             </div>
             <div className={styles.cInfoItem}>
-              <Home />
+              <Home className={styles.cIcon} />
               Mirpur 1, Dhaka, Bangladesh
             </div>
           </div>
@@ -54,34 +54,38 @@ const Contact = () => {
         <div className={styles.cRight}>
           <p className={styles.cDesc}>
             <b>What’s your story?</b> Get in touch. Always available for
-            freelancing if the right project comes along. me.
+            freelancing if the right project comes along. Write me.
           </p>
           <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
             <input
+              style={{ backgroundColor: darkMode && "#333" }}
               className={styles.input}
               type="text"
               placeholder="Name"
               name="user_name"
             />
             <input
+              style={{ backgroundColor: darkMode && "#333" }}
               className={styles.input}
               type="text"
               placeholder="Subject"
               name="user_subject"
             />
             <input
+              style={{ backgroundColor: darkMode && "#333" }}
               className={styles.input}
               type="text"
               placeholder="Email"
               name="user_email"
             />
             <textarea
+              style={{ backgroundColor: darkMode && "#333" }}
               rows="5"
               placeholder="Message"
               name="message"
               className={styles.textarea}
             />
-            <button className={styles.button}>Submit</button>
+            <button className={styles.button}>{done?"Sent":"Submit"}</button>
             {done && "Thank you..."}
           </form>
         </div>

@@ -7,6 +7,7 @@ import Contact from "../components/Contact";
 import { useContext } from "react";
 import { ThemeContext } from "../context/context";
 import Toggle from "../components/Toggle";
+import Topbar from "../components/Topbar";
 
 export default function Index() {
   const theme = useContext(ThemeContext);
@@ -25,6 +26,7 @@ export default function Index() {
           color: darkMode && "white",
         }}
       >
+        <Topbar />
         <Toggle />
         <Intro />
         <About />

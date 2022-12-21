@@ -1,44 +1,26 @@
-import {
-  AppBar,
-  CssBaseline,
-  Divider,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import { Box, Stack } from "@mui/system";
+import { Mail, Person } from "@mui/icons-material";
 import Link from "next/link";
 import React from "react";
+import styles from "../styles/Topbar.module.css";
 
 const Topbar = () => {
   return (
     <>
-      <CssBaseline />
-      <AppBar sx={{ backgroundColor: "#59C1BD", color: "black" }}>
-        <Toolbar
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography variant="h6" component="div">
-            Rakib Miah
-          </Typography>
-          <Stack direction="row" alignItems="center" gap={1}>
-            <Link href="/">Home</Link>
-            <Divider orientation="vertical" flexItem />
-            <Link href="/about/">About</Link>
-            <Divider orientation="vertical" flexItem />
-            <Link href="/skills/">Skills</Link>
-            <Divider orientation="vertical" flexItem />
-            <Link href="/portfolio/">Portfolio</Link>
-            <Divider orientation="vertical" flexItem />
-            <Link href="/contact/">Contact</Link>
-          </Stack>
-        </Toolbar>
-      </AppBar>
-      <Toolbar id="back-to-top-anchor" />
+      <div className={styles.topbar}>
+        <div className={styles.wrapper}>
+          <a href="/" className={styles.logo}>
+            devRakib
+          </a>
+          <div className={styles.itemContainer}>
+            <Person className={styles.icon} />
+            <span>+880 1580841319</span>
+          </div>
+          <div className={styles.itemContainer}>
+            <Mail className={styles.icon} />
+            <span>irakibm@gmail.com</span>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
