@@ -17,7 +17,7 @@ const Topbar = () => {
           color: darkMode && "white",
         }}
       >
-        <div className={styles.wrapper}>
+        <div className={styles.left}>
           <a href="/" className={styles.logo}>
             Rakib Miah
           </a>
@@ -29,6 +29,9 @@ const Topbar = () => {
             <Mail className={styles.icon} />
             <span>irakibm@gmail.com</span>
           </div>
+        </div>
+        <div className="right">
+          <Toggle />
         </div>
       </div>
       {/* <Toggle /> */}

@@ -18,9 +18,9 @@ const Intro = () => {
             </p>
           </div>
         </div>
-        <div className={styles.iRight}>
+        {/* <div className={styles.iRight}>
           <div className={styles.iBg}></div>
-        </div>
+        </div> */}
       </div>
     </>
   );

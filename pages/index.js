@@ -31,7 +31,6 @@ export default function Home() {
         <Topbar />
         <div className={styles.sections}>
           <div className={styles.section}>
-            {/* <Toggle /> */}
             <Intro />
           </div>
           <div className={styles.section}>

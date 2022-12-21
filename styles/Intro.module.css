@@ -60,20 +60,20 @@
   }
   
   .iIntro {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 300;
   }
   
   .iName {
-    font-size: 60px;
+    font-size: 40px;
   }
   
   .iTitle {
-    height: 50px;
+    height: 20px;
    }
   .iTitleItem {
     height: 50px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #59b256;
     display: flex;
