@@ -2,7 +2,8 @@ import styles from "../styles/Contact.module.css";
 import { useContext, useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { ThemeContext } from "../context/context";
-import { Email, Home, Phone } from "@mui/icons-material";
+import { Email, GitHub, Home, LinkedIn, Phone } from "@mui/icons-material";
+import Link from "next/link";
 
 const Contact = () => {
   const formRef = useRef();
@@ -48,6 +49,35 @@ const Contact = () => {
             <div className={styles.cInfoItem}>
               <Home className={styles.cIcon} />
               Mirpur 1, Dhaka, Bangladesh
+            </div>
+            <div className={styles.cInfoItem}>
+              <Link href="https://github.com/rakify" legacyBehavior>
+                <a target="_blank">
+                  <GitHub
+                    fontSize="large"
+                    sx={{ color: "#171515" }}
+                    className={styles.cIcon}
+                  />
+                </a>
+              </Link>
+              <Link href="https://linkedin.com/in/rakib-miah" legacyBehavior>
+                <a target="_blank">
+                  <LinkedIn
+                    fontSize="large"
+                    sx={{ color: "#0e76a8" }}
+                    className={styles.cIcon}
+                  />
+                </a>
+              </Link>
+              <Link href="mailto:irakibm@gmail.com" legacyBehavior>
+                <a target="_blank">
+                  <Email
+                    fontSize="large"
+                    sx={{ color: "#d44608" }}
+                    className={styles.cIcon}
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>

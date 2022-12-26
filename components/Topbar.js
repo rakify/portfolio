@@ -18,9 +18,6 @@ const Topbar = () => {
         }}
       >
         <div className={styles.left}>
-          <a href="/" className={styles.logo}>
-            Rakib Miah
-          </a>
           <div className={styles.itemContainer}>
             <Person className={styles.icon} />
             <span>+880 1580841319</span>
