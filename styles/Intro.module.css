@@ -8,28 +8,24 @@
     gap:5px;
 }
   
-.iIntro {
-    font-size: 40px;
-    font-weight: 300;
-}
-  
 .iName {
-    font-size: 40px;
+    font-size: 50px;
 }
   
 .iTitle {
-    height: 20px;
+    height: 30px;
+    font-size: 30px;
     color: #59b256;
 }
 .iDesc {
     height: 50px;
-    font-size: 18px;
+    font-size: 25px;
   }
 
 
 .iButton1{
   position: relative;
-  font-size: 18px;
+  font-size: 25px;
   padding: 5px 2px;
   height: 20px;
   text-transform: lower;
@@ -59,7 +55,7 @@
 
   .iButton2{
     position: relative;
-    font-size: 18px;
+    font-size: 25px;
     padding: 5px 2px;
     height: 20px;
     text-transform: lowercase;
@@ -88,7 +84,7 @@
 
 @media screen and (max-width:480px) {
   .i{
-    padding: 0px;
+    padding: 10px;
     gap:0px;
   }
 
