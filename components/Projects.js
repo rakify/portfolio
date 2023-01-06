@@ -15,12 +15,7 @@ const Projects = () => {
         {projects.map((item) => (
           <Project
             key={item.id}
-            img={item.img}
-            title={item.title}
-            demo={item.demo}
-            desc={item.desc}
-            github={item.github}
-            date={item.date}
+            p={item}
           />
         ))}
       </div>

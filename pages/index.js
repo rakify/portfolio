@@ -28,7 +28,6 @@ export default function Home() {
         }}
         className={styles.app}
       >
-        <Topbar />
         <div className={styles.sections}>
           <div className={styles.section}>
             <Intro />

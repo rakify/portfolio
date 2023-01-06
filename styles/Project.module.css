@@ -14,6 +14,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
+
   .pImg {
     width: 100%;
     height: 60%;
@@ -25,9 +26,17 @@
     object-position: bottom center;
   }
 
+  .pLink {
+    color:#15a;
+  }
+  
+  .pLink:hover {
+    font-weight: bold;
+  }
   .pGithub {
     background-color:#171515;
   }
+  
   .pDemo {
     background-color:#59b256;
   }
