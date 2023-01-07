@@ -97,4 +97,7 @@
     .itemContainer {
       display: none;
     }
+    .left {
+      display: none;
+    }
 }
