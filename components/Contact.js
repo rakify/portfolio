@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <div className={styles.c} id="contact">
-      <div className={styles.cBg}></div>
+      <div className={styles.cBg} style={{backgroundColor:darkMode && "#333"}}></div>
       <div className={styles.cWrapper}>
         <div className={styles.cLeft}>
           <h1 className={styles.cTitle}>Let's discuss your project</h1>

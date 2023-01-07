@@ -23,7 +23,6 @@ const ProjectIndex = () => {
   const p = projects.find((p) => p.slug === router.query.project) || [];
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-  console.log(p);
   return (
     <>
       <Head>
@@ -121,18 +120,20 @@ const ProjectIndex = () => {
                   <Typography gutterBottom variant="h5" component="div">
                     {item.title}
                   </Typography>
-                  <CardMedia
-                    component="img"
-                    image={item?.img}
-                    alt="Image"
-                    sx={{
-                      cursor: "pointer",
-                      objectFit: "contain",
-                      objectPosition: "60% 100%",
-                      width: "100%",
-                      maxHeight: 400,
-                    }}
-                  />
+                  <Link href={item?.img}>
+                    <CardMedia
+                      component="img"
+                      image={item?.img}
+                      alt="Image"
+                      sx={{
+                        cursor: "pointer",
+                        objectFit: "contain",
+                        objectPosition: "60% 100%",
+                        width: "100%",
+                        maxHeight: 400,
+                      }}
+                    />
+                  </Link>
                 </CardContent>
               </Paper>
             ))}
